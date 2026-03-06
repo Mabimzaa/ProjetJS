@@ -1,8 +1,0 @@
-<!--index.html -->
-<!DOCTYPE html>
-<body>
-    <script>
-        alert("Hello JS !");
-    </script>
-</body>
-</html>

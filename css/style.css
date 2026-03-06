@@ -1,0 +1,12 @@
+background {
+    background-size: fill;
+    background-image: url(../assets/couloir.avif);
+}
+
+button {
+    color: tomato;
+    align-items: center;
+    margin-left: 45%;
+    margin-top: 25%;
+    font-size: larger;
+}
