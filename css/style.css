@@ -7,6 +7,10 @@ body {
     background: #000;
 }
 
+body.light {
+    background: #d9d9d9;
+}
+
 .game {
     position: relative;
     width: min(1100px, 92vw);
@@ -27,6 +31,10 @@ body {
 
 h1 {
     color: white;
+}
+
+body.light h1 {
+    color: black;
 }
 
 button {

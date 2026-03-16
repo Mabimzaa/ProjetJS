@@ -18,3 +18,36 @@ if (backBtn) {
         history.back();
     });
 }
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    document.body.classList.add('light');
+}
+
+const themeBtn = document.querySelector('.theme');
+
+function updateThemeButton() {
+    if (themeBtn) {
+        if (document.body.classList.contains('light')) {
+            themeBtn.textContent = 'Theme sombre';
+        } else {
+            themeBtn.textContent = 'Theme clair';
+        }
+    }
+}
+
+if (themeBtn) {
+    updateThemeButton();
+
+    themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('light');
+
+        if (document.body.classList.contains('light')) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.setItem('theme', 'dark');
+        }
+
+        updateThemeButton();
+    });
+}
