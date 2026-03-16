@@ -25,6 +25,10 @@ body {
     z-index: 1;
 }
 
+h1 {
+    color: white;
+}
+
 button {
     color: tomato;
     font-size: larger;
