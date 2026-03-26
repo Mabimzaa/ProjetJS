@@ -6,6 +6,7 @@ class Personnage {
         this.sexe = sexe;
         this.pv = pv;
         this.armor = armor;
+        this.weapon = null
       // corps du constructeur
     }
     attaquer(cible, degats) {
