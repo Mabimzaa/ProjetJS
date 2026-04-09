@@ -1,4 +1,5 @@
 export default class BlueToro {
+  // Boost temporaire mixte (attaque + defense) achetable
   constructor(bonusForce = 3, bonusArmor = 1, duree = 3, prix = 15) {
     this.name = "Blue Toro";
     this.bonusForce = bonusForce;
@@ -7,6 +8,7 @@ export default class BlueToro {
     this.prix = prix;
   }
 
+  // Applique puis retire les bonus apres la duree prevue
   appliquer(cible) {
     cible.ajouterEffet(
       "Boost Blue Toro",

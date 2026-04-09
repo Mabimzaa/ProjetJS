@@ -3,6 +3,7 @@ import BadgeAcces from "../Objets/BadgeAcces.js";
 import Tenue from "../Objets/Tenue.js";
 
 export default class Infirmiere extends Mob {
+  // Ennemi du 3e etage: drop tenue (defense) + badge vers etage 4
   constructor(index = 1) {
     super(`Infirmiere ${index}`, 29, "F", 55, 3, 8, 3, [
       new Tenue(3),
