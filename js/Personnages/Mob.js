@@ -1,4 +1,4 @@
-import Personnage from "./Perso.js";
+import Personnage from "./Perso.js"; 
 
 export default class Mob extends Personnage {
   // Classe de base pour tous les ennemis d'etage

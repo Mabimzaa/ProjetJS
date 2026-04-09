@@ -1,11 +1,7 @@
-// =====================
-// NAVIGATION
-// =====================
-
 const startBtn = document.querySelector('.start');
 if (startBtn) {
     startBtn.addEventListener('click', () => {
-        window.location.href = 'cinematique.html?scene=intro';
+        window.location.href = 'cinematique.html?scene=intro&dest=game.html';
     });
 }
 
@@ -24,9 +20,8 @@ if (backBtn) {
 }
 
 // =====================
-// THEME
+// THÈME
 // =====================
-
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
     document.body.classList.add('light');
@@ -35,10 +30,13 @@ if (savedTheme === 'light') {
 const themeBtn = document.querySelector('.theme');
 
 function updateThemeButton() {
-    if (!themeBtn) return;
-    themeBtn.textContent = document.body.classList.contains('light')
-        ? 'Thème sombre'
-        : 'Thème clair';
+    if (themeBtn) {
+        if (document.body.classList.contains('light')) {
+            themeBtn.textContent = 'Thème sombre';
+        } else {
+            themeBtn.textContent = 'Thème clair';
+        }
+    }
 }
 
 if (themeBtn) {
@@ -46,9 +44,13 @@ if (themeBtn) {
 
     themeBtn.addEventListener('click', () => {
         document.body.classList.toggle('light');
-        localStorage.setItem('theme',
-            document.body.classList.contains('light') ? 'light' : 'dark'
-        );
+
+        if (document.body.classList.contains('light')) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.setItem('theme', 'dark');
+        }
+
         updateThemeButton();
     });
 }

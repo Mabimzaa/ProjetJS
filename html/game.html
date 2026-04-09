@@ -7,9 +7,67 @@
 </head>
 <body>
     <div class="game">
-        <div class="container">
+
+        <!-- ÉCRAN COMBAT -->
+        <div class="combat_screen" id="combatScreen">
+
+            <!-- Ennemi -->
+            <div class="enemy_zone">
+                <p class="entity_name" id="enemyName">Secrétaire</p>
+                <div class="hp_bar">
+                    <div class="hp_fill" id="enemyHpBar"></div>
+                </div>
+                <p class="hp_text" id="enemyHpText">55 / 55</p>
+                <div class="entity_sprite" id="enemySprite">👤</div>
+            </div>
+
+            <!-- Log de combat -->
+            <div class="combat_log" id="combatLog">
+                <p>Le combat commence...</p>
+            </div>
+
+            <!-- Joueur -->
+            <div class="player_zone">
+                <div class="entity_sprite" id="playerSprite">🧍</div>
+                <p class="entity_name">Patient X</p>
+                <div class="hp_bar">
+                    <div class="hp_fill player_bar" id="playerHpBar"></div>
+                </div>
+                <p class="hp_text" id="playerHpText">100 / 100</p>
+            </div>
+
+            <!-- Actions -->
+            <div class="actions">
+                <button class="action_btn" id="attackBtn">⚔️ Attaquer</button>
+                <button class="action_btn schizo_btn" id="schizoBtn" disabled>
+                    🧠 Mode Schizo
+                </button>
+                <button class="action_btn" id="itemBtn">🎒 Objets</button>
+            </div>
+
+            <!-- Inventaire (caché par défaut) -->
+            <div class="inventory" id="inventory" style="display:none">
+                <p>Inventaire vide</p>
+            </div>
+
         </div>
+
+        <!-- ÉCRAN GAME OVER -->
+        <div class="gameover_screen" id="gameoverScreen" style="display:none">
+            <h2>GAME OVER</h2>
+            <p id="gameoverMsg">Vous avez été rattrapé...</p>
+            <button class="action_btn" id="retryBtn">Retour au menu</button>
+        </div>
+
+        <!-- ÉCRAN VICTOIRE ÉTAGE -->
+        <div class="victory_screen" id="victoryScreen" style="display:none">
+            <h2 id="victoryTitle">Étage terminé !</h2>
+            <p id="victoryLoot">Vous avez obtenu : </p>
+            <button class="action_btn" id="nextFloorBtn">Étage suivant ➡️</button>
+        </div>
+
     </div>
-    <script src="../js/script.js"></script>
+
+    <script type="module" src="../js/game.js"></script>
 </body>
 </html>

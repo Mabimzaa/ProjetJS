@@ -2,6 +2,7 @@ import Mob from "./Mob.js";
 import BadgeAcces from "../Objets/BadgeAcces.js";
 import Taser from "../Objets/Taser.js";
 
+
 export default class Vigile extends Mob {
   // Mini-boss du 5e etage: utilise et drop un taser + badge final
   constructor() {
