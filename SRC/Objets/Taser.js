@@ -3,8 +3,17 @@ import Weapon from "./weapon.js";
 
 export default class Taser extends Weapon {
   constructor() {
-    super("Taser", 0);      // super pour donne l heritage et pas this pour definir 
-    // degat à adapter
-    this.chance = 0.5;      // this pour attribuer //50% de toucher
+    super("Taser", 2);
+    this.chance = 0.5;
+  }
+
+  effetSpecial(attaquant, cible) {
+    const jet = Math.random();
+    if (jet < this.chance) {
+      cible.skipTurn = true;
+      return `${attaquant.nom} electrocute ${cible.nom}, qui perd son tour.`;
+    }
+    attaquant.skipTurn = true;
+    return `${attaquant.nom} se prend son propre taser et perd son tour.`;
   }
 }
