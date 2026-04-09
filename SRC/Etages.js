@@ -6,6 +6,7 @@ import Vigile from "./Personnages/Vigile.js";
 import ChefHopital from "./Personnages/ChefHopital.js";
 
 export function creerEtages() {
+  // Meme coeur de map: on ne change que les mobs/contraintes par etage
   return [
     {
       numero: 1,
@@ -13,6 +14,7 @@ export function creerEtages() {
       mobsMin: 1,
       mobsMax: 1,
       combatObligatoire: true,
+      // 1er combat scenario: secretaire -> badge pour continuer
       mobs: [new Secretaire()],
     },
     {
@@ -21,6 +23,7 @@ export function creerEtages() {
       mobsMin: 2,
       mobsMax: 2,
       combatObligatoire: true,
+      // 2 aides-soignantes comme demande
       mobs: [new AideSoignante(1), new AideSoignante(2)],
     },
     {
@@ -29,6 +32,7 @@ export function creerEtages() {
       mobsMin: 2,
       mobsMax: 2,
       combatObligatoire: true,
+      // Etage avec distributeur (gaufrette / blue toro)
       distributeur: true,
       mobs: [new Infirmiere(1), new Infirmiere(2)],
     },
@@ -46,6 +50,7 @@ export function creerEtages() {
       mobsMin: 1,
       mobsMax: 1,
       combatObligatoire: true,
+      // Mini boss de securite
       mobs: [new Vigile()],
     },
     {
@@ -54,6 +59,7 @@ export function creerEtages() {
       mobsMin: 1,
       mobsMax: 1,
       combatObligatoire: true,
+      // Boss final: chef + revelation "illuminati"
       mobs: [new ChefHopital()],
     },
   ];

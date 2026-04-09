@@ -14,10 +14,12 @@ export default class Personnage {
     this.skipTurn = false;
   }
 
+  // Equipe une arme (optionnel)
   equiperArme(weapon) {
     this.weapon = weapon;
   }
 
+  // Ajoute un objet dans l'inventaire (loot, soin, etc.)
   ajouterObjet(objet) {
     this.inventory.push(objet);
   }
@@ -32,6 +34,7 @@ export default class Personnage {
     return true;
   }
 
+  // Degats finaux = force de base + degats d'arme
   attaquer(cible) {
     const degatsArme = this.weapon ? this.weapon.dommage : 0;
     const degats = this.force + degatsArme;
@@ -39,17 +42,20 @@ export default class Personnage {
     return degats;
   }
 
+  // L'armure reduit les degats, mais on prend toujours au moins 1
   subirDegats(degats) {
     const degatsReels = Math.max(1, degats - this.armor);
     this.pv -= degatsReels;
     return degatsReels;
   }
 
+  // Effet temporaire (ex: seringue / blue toro), avec callback d'application et de retrait
   ajouterEffet(nom, tours, appliquer, retirer) {
     this.effects.push({ nom, tours, appliquer, retirer });
     if (appliquer) appliquer(this);
   }
 
+  // A appeler a chaque fin de tour pour decremeter et retirer les buffs expires
   decrementerEffets() {
     this.effects = this.effects.filter((effet) => {
       effet.tours -= 1;
