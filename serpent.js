@@ -13,3 +13,14 @@ if (direction === "DOWN") { snakeY += boxSize;
 }
 }
 }
+
+//Vérification si le serpent mange la nourriture
+if (snakeX === food.x && snakeY === food.y) {
+score++;
+scoreDisplay.textContent = `Score: ${score}`;
+food = spawnFood();
+} else {
+snake.pop();
+}
+
+let newHead = {x: snakeX, y: snakeY};
