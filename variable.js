@@ -12,7 +12,7 @@ let snake = [
     {x: 9 * boxSize, y: 10 * boxSize}
 ]
 
-let direction = "right";
+let direction = "RIGHT";
 
 let score = 0;
 
