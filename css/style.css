@@ -1,7 +1,204 @@
-button {
-    color: tomato;
+/* =====================
+   BASE
+===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 45%;
-    margin-top: 25%;
-    font-size: larger;
+    background: #000;
+    font-family: 'Georgia', serif;
+    transition: background 0.4s;
+}
+
+body.light {
+    background: #d9d9d9;
+}
+
+/* =====================
+   GAME CONTAINER
+===================== */
+
+.game {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.game > *:not(.game_screen) {
+    position: relative;
+    z-index: 1;
+}
+
+/* =====================
+   FOND
+===================== */
+
+.game_screen {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: brightness(0.5);
+}
+
+/* =====================
+   TITRE
+===================== */
+
+#game-title {
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 2.8rem;
+    text-align: center;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd70066, 0 0 60px rgba(255, 0, 0, 0.3);
+    margin-bottom: 1rem;
+}
+
+body.light #game-title {
+    color: #1a1a1a;
+    text-shadow: none;
+}
+
+/* =====================
+   BOUTONS
+===================== */
+
+button {
+    background: transparent;
+    border: 1px solid #ffd700;
+    color: #ffd700;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    padding: 12px 32px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #ffd700;
+    color: #000;
+    box-shadow: 0 0 20px #ffd70088;
+}
+
+body.light button {
+    border-color: #333;
+    color: #333;
+}
+
+body.light button:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* =====================
+   CINEMATIQUE
+===================== */
+
+.cinematique {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cin_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #1a0a00 0%, #000 100%);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.cin_overlay.active {
+    opacity: 1;
+}
+
+.cin_content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 40px;
+    max-width: 700px;
+}
+
+.cin_texte {
+    color: #fff;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    min-height: 60px;
+    text-shadow: 0 0 20px #ffd700;
+    line-height: 1.6;
+}
+
+.cin_texte.visible {
+    opacity: 1;
+}
+
+.cin_skip {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    margin-top: 0;
+    background: transparent;
+    border: 1px solid #444;
+    color: #444;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    box-shadow: none;
+}
+
+.cin_skip:hover {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+    box-shadow: none;
+}
+
+/* =====================
+   OPTIONS
+===================== */
+
+.options_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
