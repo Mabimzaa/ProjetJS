@@ -72,4 +72,4 @@ une police Courier New rétro et un effet d'écran LCD.
 
 Auteur
 
-Projet réalisé en 1ere année de developpement web en groupe de 3.
+Projet réalisé en 1ere année d'informatique en groupe de 3.
