@@ -12,6 +12,8 @@ https://github.com/user-attachments/assets/f5363fcb-4112-4f3b-8f6a-f5abb66a84af
 ProjetJS/
 ├── css/
 │   └── style.css
+├── docs/
+│   └── ProjetJS.pdf
 ├── js/
 │   ├── config.js
 │   ├── food.js
