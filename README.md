@@ -62,7 +62,7 @@ Le navigateur s'ouvre automatiquement sur http://localhost:8080
 - Le serpent grandit à chaque fois qu'il mange un pixel de nourriture
 - Le score augmente de 1 point à chaque nourriture mangée
 - Le jeu se termine si le serpent touche un mur ou son propre corps
-- Un bouton Recommencer apparaît quand la partie est terminée
+- Un bouton Recommencer apparaît quand la partie est terminée.Il faut appuyer sur recommence pour relancer une partie.
 
 ## Configuration
 
