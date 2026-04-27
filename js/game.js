@@ -44,7 +44,7 @@ function gameOver() {
 function recommencer() {
     // Remettre les valeurs de départ
     snake = [{x: 9 * boxSize, y: 10 * boxSize}];
-    direction = "RIGHT";
+    direction = directions[Math.floor(Math.random() * directions.length)];
     score = 0;
     scoreDisplay.textContent = "Score : 0";
     food = randomFood();
