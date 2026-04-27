@@ -54,22 +54,31 @@ Le navigateur s'ouvre automatiquement sur http://localhost:8080
 
 - Flèche haut    : Aller en haut
 - Flèche bas     : Aller en bas
-- Flèche gauche  : Aller a gauche
-- Flèche droite  : Aller a droite
+- Flèche gauche  : Aller à gauche
+- Flèche droite  : Aller à droite
 
 ## Règles
 
-- Le serpent grandit a chaque fois qu'il mange un pixel de nourriture
-- Le score augmente de 1 point a chaque nourriture mangée
+- Le serpent grandit à chaque fois qu'il mange un pixel de nourriture
+- Le score augmente de 1 point à chaque nourriture mangée
 - Le jeu se termine si le serpent touche un mur ou son propre corps
-- Un bouton Recommencer apparait quand la partie est terminée
+- Un bouton Recommencer apparaît quand la partie est terminée
+
+## Configuration
+
+Toutes les variables de configuration se trouvent dans js/config.js :
+
+- `boxSize` : Taille d'une case en pixels (valeur par défaut : 20)
+- `gameSpeed` : Délai en millisecondes entre chaque mise à jour du jeu (valeur par défaut : 100)
+- `snake` : Position de départ du serpent, initialisé au centre du canvas en x: 9 * boxSize, y: 10 * boxSize
+- `direction` : Direction initiale du serpent (valeur par défaut : RIGHT)
+- `score` : Score du joueur, initialisé à 0
 
 ## Style
 
 Le jeu est inspiré du Nokia 3310 avec des couleurs vertes pixel art,
 une police Courier New rétro et un effet d'écran LCD.
 
+## Auteur
 
-Auteur
-
-Projet réalisé en 1ere année d'informatique en groupe de 3.
+Projet réalisé en 1ère année d'informatique en groupe de 3.
