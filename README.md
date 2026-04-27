@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-# ProjetJS
-Projet JS 
-
-to launch :
-git clone 'github link'
-=======
 # Snake Over
 
 Un jeu Snake classique inspiré du Nokia 3310, développé en JavaScript vanilla.
