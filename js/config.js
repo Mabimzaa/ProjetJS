@@ -8,7 +8,9 @@ let snake = [
     {x: 9 * boxSize, y: 10 * boxSize}
 ];
 
-let direction = "RIGHT";
+const directions = ["RIGHT", "LEFT", "UP", "DOWN"];
+let direction = directions[Math.floor(Math.random() * directions.length)];
+
 let score = 0;
 let game = null;
 

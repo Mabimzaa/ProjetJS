@@ -2,6 +2,10 @@
 
 Un jeu Snake classique inspiré du Nokia 3310, développé en JavaScript vanilla.
 
+## Aperçu
+
+https://github.com/user-attachments/assets/f5363fcb-4112-4f3b-8f6a-f5abb66a84af
+
 ## Structure du projet
 
 ```
